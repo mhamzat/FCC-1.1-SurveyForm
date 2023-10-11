@@ -1,10 +1,96 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Page Title</title>
+		<title>Survey Form</title>
 	</head>
 	<body>
-		<h1>This is a Heading</h1>
-		<p>This is a paragraph.</p>
+		<h1 id="title">Survey Form</h1>
+		<p id="description">
+			Thank you for taking the time to help us improve the platform
+		</p>
+		<form id="survey-form">
+			<!-- Name -->
+			<label for="name" id="name-label">Name:</label>
+			<input
+				type="text"
+				name="name"
+				id="name"
+				placeholder="Enter your name"
+				required
+			/>
+
+			<!-- Email -->
+			<label for="email" id="email-label">Email:</label>
+			<input
+				type="email"
+				name="email"
+				id="email"
+				placeholder="Enter your email"
+				required
+			/>
+
+			<!-- Age -->
+			<label for="number" id="number-label">Age:</label>
+			<input
+				type="number"
+				name="age"
+				id="number"
+				min="1"
+				max="125"
+				placeholder="Enter your age"
+				required
+			/>
+
+			<!-- Dropdown -->
+			<p>Which option best describes your current role?</p>
+			<select id="dropdown">
+				<option value="student">Student</option>
+				<option value="full-time-job">Full Time Job</option>
+				<option value="full-time-learner">Full Time Learner</option>
+				<option value="prefer-not-to-say">Prefer not to say</option>
+				<option value="other">Other</option>
+			</select>
+
+			<!-- Radio Buttons -->
+			<p>Would you recommend freeCodeCamp to a friend?</p>
+			<label>
+				<input type="radio" name="user-recommend" value="definitely" />
+				Definitely
+			</label>
+			<label>
+				<input type="radio" name="user-recommend" value="maybe" />
+				Maybe
+			</label>
+
+			<!-- Checkboxes -->
+			<p>What is your favorite feature of freeCodeCamp?</p>
+			<label>
+				<input type="checkbox" name="prefer" value="challenges" />
+				Challenges
+			</label>
+			<label>
+				<input type="checkbox" name="prefer" value="projects" />
+				Projects
+			</label>
+			<label>
+				<input type="checkbox" name="prefer" value="community" />
+				Community
+			</label>
+			<label>
+				<input type="checkbox" name="prefer" value="open-source" />
+				Open Source
+			</label>
+
+			<!-- Textarea -->
+			<p>Any comments or suggestions?</p>
+			<textarea
+				name="comment"
+				id="comment"
+				placeholder="Enter your comment here..."
+			></textarea>
+
+			<!-- Submit -->
+			<button type="submit" id="submit">Submit</button>
+		</form>
 	</body>
 </html>
